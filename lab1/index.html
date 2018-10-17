@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <style>
+          h1 {
+            font-family: Lobster, Monospace;
+          }
+          h2 {
+              font-family: Lobster, Monospace;
+          }
+          .rozmar {
+              width: 50%;
+          }
+          </style>
+  <head>
+
+     <meta charset="utf-8">
+     <title>Witam serdecznie</title>
+
+     <meta name="author" content="Artur Lewandowski">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     
+
+  </head>
+  <body>
+    <center>
+    <h1 class= "text-center">Witam niezwykle serdecznie</h1>
+    <img src="https://img.agrofoto.pl/gallery/album_1555/kotek_19977_1555_1929278.jpg"  class="img-responsive rozmar" alt "Kotek startowy">
+    
+    <h2>
+    <SCRIPT LANGUAGE="JavaScript">
+            miesiac = new Array(12)
+            miesiac[0] = "stycznia "
+            miesiac[1] = "lutego "
+            miesiac[2] = "marca "
+            miesiac[3] = "kwietnia "
+            miesiac[4] = "maja "
+            miesiac[5] = "czerwca "
+            miesiac[6] = "lipca "
+            miesiac[7] = "sierpnia "
+            miesiac[8] = "września "
+            miesiac[9] = "października "
+            miesiac[10] = "listopada "
+            miesiac[11] = "grudnia "
+            dzien = new Array(7)
+            dzien[0] = "niedziela "
+            dzien[1] = "poniedziałek "
+            dzien[2] = "wtorek "
+            dzien[3] = "środa "
+            dzien[4] = "czwartek "
+            dzien[5] = "piątek "
+            dzien[6] = "sobota "
+            function podaj_date()
+            {
+            var Dzisiaj = new Date()
+            var Tygodnia = Dzisiaj.getDay()
+            var Miesiac = Dzisiaj.getMonth()
+            var Dnia = Dzisiaj.getDate()
+            var Rok = Dzisiaj.getFullYear()
+            if(Rok <= 99) Rok += 1900
+            return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + ", " + Rok +"r." }
+            </SCRIPT>
+            <SCRIPT>
+                document.write("Dziś jest " + podaj_date())
+    
+            </SCRIPT>
+            </h2>
+    </center>
+  </body>
+
+</html>
