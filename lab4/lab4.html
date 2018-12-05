@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+        .bcg{
+            background-color: bisque;
+            text-align: center
+        }
+        .tablestyle{
+            text-align: center;
+            border-collapse:collapse;
+        border:1px solid black;
+        padding:5px;
+        }
+        .czcioneczka{
+            font-size: 5mm;
+            color: dimgrey
+        }
+        </style>
+    </head>
+    <body class= "bg-warning">
+            <figure>
+                    <img width="50%" height="50%" src="https://royalcanin.pl/blog/wp-content/uploads/2017/01/mleko-950x631.jpeg" alt="Budowa eugleny zielonej" />
+                    <figcaption>
+                      Rysunek 1. Kot na kolokwium z <strong><em>FIZYKI</em></strong>
+                    </figcaption>
+                  </figure>
+                  
+
+                  <p class="text-danger">W oczekiwaniu na aktualizacje strony - muzyczka: </p>
+                  <audio controls="controls">
+                        <source src="plik_audio.wav" type="audio/wav" />
+                        <source src="plik_audio.ogg" type="audio/ogg" />
+                        <source src="elevator.mp3" type="audio/mpeg" />
+                        Twoja przeglądarka nie obsługuje znacznika audio
+                    </audio>
+
+                         
+
+                    <form class="form-inline" action="form.php" method="POST">
+                        <label for="imie">Imie:</label>
+                        <input type="imie" class="form-control" id="Imie" name="Imie">
+                        <label for="nazwisko">Nazwisko:</label>
+                        <input type="nazwisko" class="form-control" id="Nazwisko" name="Nazwisko">
+                        <label for="wiek">Wiek</label>
+                        <input type="wiek" class="form-control" id="Wiek" name="Wiek">
+                        
+                        </div>
+                        <button type="submit" class="btn btn-primary">Wyślij do bazy</button>
+                      </form>
+
+
+                      <p id="pt1">
+                            Ten tekst zostanie zmieniony...
+                            </p>
+                      <button type="button" onclick="pobierzDane()">Pobierz dane
+                        </button>
+                     <script>
+                         var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest){
+  XMLHttpRequestObject = new XMLHttpRequest();
+}
+else if (window.ActiveXObject){
+  XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+function pobierzDane()
+{
+  if(XMLHttpRequestObject){
+    var p = document.getElementById("pt1");
+    XMLHttpRequestObject.open("GET", "test.txt");
+    XMLHttpRequestObject.onreadystatechange = function()
+    {
+      if (XMLHttpRequestObject.readyState == 4 && 
+          XMLHttpRequestObject.status == 200) {
+        p.innerHTML = XMLHttpRequestObject.responseText;
+      }
+    }
+    XMLHttpRequestObject.send(null);
+  }
+}
+</script>
+    </body>
+</html>
