@@ -1,0 +1,8 @@
+SELECT COUNT(ID) FROM `Wiek` WHERE id>1
+
+SELECT SUM(Wiek) FROM `Wiek`
+
+SELECT AVG(Wiek) FROM `Wiek`
+
+SELECT * FROM Wiek
+WHERE Imie LIKE ’s%';
